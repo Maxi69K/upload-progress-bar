@@ -1,0 +1,158 @@
+/*   random images:      https://source.unsplash.com/random    */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+/**********************************************
+                Global styles
+**********************************************/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+}
+
+/**********************************************
+                Specific styles
+**********************************************/
+.container {
+  position: absolute;
+  top: 47vh;
+  left: 1%;
+  width: 98% !important;
+  z-index: 2;
+}
+
+#progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, .5);
+  border-radius: 2px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+#myBar {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  width: 80px;
+  height: 25px;
+  background-color: #4caf50;
+  border-color: #ddd;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #4cd351;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  border: 8px solid rgba(221, 221, 221, .6);
+  border-radius: 5px;
+}
+
+:root {
+  --speed: 5s;
+}
+
+.blur {
+  filter: blur(1.5rem);
+}
+
+.clear {
+  animation: clearImg var(--speed);
+}
+
+@keyframes clearImg {
+  0% {
+    filter: blur(1.5rem);
+  }
+
+  10% {
+    filter: blur(1.35rem);
+  }
+
+  20% {
+    filter: blur(1.2rem);
+  }
+
+  30% {
+    filter: blur(1.05rem);
+  }
+
+  40% {
+    filter: blur(0.9rem);
+  }
+
+  50% {
+    filter: blur(0.75rem);
+  }
+
+  60% {
+    filter: blur(0.6rem);
+  }
+
+  70% {
+    filter: blur(0.45rem);
+  }
+
+  80% {
+    filter: blur(0.3rem);
+  }
+
+  90% {
+    filter: blur(0.15rem);
+  }
+
+  100% {
+    filter: blur(0rem);
+  }
+}
+
+/**************************************
+            @media Queries
+**************************************/
+
+@media all and (min-width: 768px) {
+  .container {
+    top: 61vh;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    top: 73vh;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container {
+    top: 86vh;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .container {
+    top: 93vh;
+  }
+}
